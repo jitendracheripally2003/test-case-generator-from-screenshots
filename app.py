@@ -10,7 +10,7 @@ def encode_image_to_base64(image_file):
 st.title("Test Case Generator from Screenshots")
 
 # Image upload
-uploaded_files = st.file_uploader("Upload Screenshots (Please upload at least one image.)", type=['png', 'jpeg', 'jpg'], accept_multiple_files=True)
+uploaded_files = st.file_uploader("Upload Screenshots (Please upload at least one image)", type=['png', 'jpeg', 'jpg'], accept_multiple_files=True)
 
 # Optional text input for context
 optional_text = st.text_area("Optional Text Context:", placeholder="Enter any additional context for the test cases...")
