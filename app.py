@@ -6,8 +6,15 @@ import base64
 def encode_image_to_base64(image_file):
     return base64.b64encode(image_file.read()).decode('utf-8')
 
+# Page config
+st.set_page_config(
+    page_title="Test Case Generator",
+    layout="wide",
+)
+
 # Streamlit App
 st.title("Test Case Generator from Screenshots")
+st.write("""By Jitendra Cheripally - Email: jitendracheripally@gmail.com - LinkedIn: [jitendracheripally](https://www.linkedin.com/in/jitendracheripally) - GitHub: [jitendracheripally2003](https://github.com/jitendracheripally2003)""")
 
 # Image upload
 uploaded_files = st.file_uploader("Upload Screenshots (Please upload at least one image)", type=['png', 'jpeg', 'jpg'], accept_multiple_files=True)
